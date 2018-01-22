@@ -6,6 +6,7 @@
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "TestCPUAndRAMUser.exe"
+#define MyPath "F:\TODO\C# und VB\TestCPUAndRAMUser"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -25,10 +26,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\License.txt
-OutputDir=C:\Users\tim\Desktop\TestCPUAndRAMUser\Setup
+LicenseFile={#MyPath}\TestCPUAndRAMUser\bin\Debug\License.txt
+OutputDir={#MyPath}\Setup
 OutputBaseFilename=TestCPUAndRAMUser-Setup
-SetupIconFile=C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\CPU.ico
+SetupIconFile={#MyPath}\TestCPUAndRAMUser\bin\Debug\CPU.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -65,10 +66,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\TestCPUAndRAMUser.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\CPU.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\tim\Desktop\TestCPUAndRAMUser\TestCPUAndRAMUser\bin\Debug\Test.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\TestCPUAndRAMUser\bin\Debug\TestCPUAndRAMUser.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\TestCPUAndRAMUser\bin\Debug\CPU.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\TestCPUAndRAMUser\bin\Debug\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyPath}\TestCPUAndRAMUser\bin\Debug\Test.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
