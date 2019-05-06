@@ -6,7 +6,7 @@
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "TestCPUAndRAMUser.exe"
-#define MyPath "F:\TODO\C# und VB\TestCPUAndRAMUser"
+#define MyPath "I:\Todo\Upgedated_Auf FPs\TestCPUAndRAMUser"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
