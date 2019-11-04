@@ -8,7 +8,7 @@ The executable was written and tested in .Net 4.8.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/TestCPUAndRAMUser.svg)](https://github.com/SeppPenner/TestCPUAndRAMUser/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/TestCPUAndRAMUser.svg)](https://github.com/SeppPenner/TestCPUAndRAMUser/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/TestCPUAndRAMUser.svg)](https://github.com/SeppPenner/TestCPUAndRAMUser/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/TestCPUAndRAMUser/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/TestCPUAndRAMUser/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/TestCPUAndRAMUser/badge.svg)](https://snyk.io/test/github/SeppPenner/TestCPUAndRAMUser)
 
 Change history
