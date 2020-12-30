@@ -2,11 +2,10 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "\TestCPUAndRAMUser"
-#define MyAppVersion "1.0.1.0"
+#define MyAppVersion "1.0.2.0"
 #define MyAppPublisher "Hämmer Electronics"
 #define MyAppURL "www.softwareload24.de.tl"
 #define MyAppExeName "TestCPUAndRAMUser.exe"
-#define MyPath "C:\Users\Tim\Documents\Git\C# und VB\TestCPUAndRAMUser"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -26,10 +25,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={commonpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile={#MyPath}\TestCPUAndRAMUser\bin\Release\License.txt
-OutputDir={#MyPath}\Setup
+LicenseFile=..\src\TestCPUAndRAMUser\License.txt
+OutputDir=..\Setup
 OutputBaseFilename=TestCPUAndRAMUser-Setup
-SetupIconFile={#MyPath}\TestCPUAndRAMUser\bin\Release\CPU.ico
+SetupIconFile=..\src\TestCPUAndRAMUser\CPU.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -42,10 +41,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "{#MyPath}\TestCPUAndRAMUser\bin\Release\TestCPUAndRAMUser.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\TestCPUAndRAMUser\bin\Release\CPU.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\TestCPUAndRAMUser\bin\Release\License.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#MyPath}\TestCPUAndRAMUser\bin\Release\Test.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\TestCPUAndRAMUser\bin\Release\net5.0-windows\TestCPUAndRAMUser.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\TestCPUAndRAMUser\bin\Release\net5.0-windows\TestCPUAndRAMUser.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\TestCPUAndRAMUser\bin\Release\net5.0-windows\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\TestCPUAndRAMUser\bin\Release\net5.0-windows\Test.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
