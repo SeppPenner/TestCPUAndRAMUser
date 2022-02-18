@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Program.cs" company="Hämmer Electronics">
 //   Copyright (c) All rights reserved.
 // </copyright>
@@ -7,200 +7,192 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace TestCPUAndRAMUser
+namespace TestCPUAndRAMUser;
+
+/// <summary>
+/// The main program.
+/// </summary>
+public static class Program
 {
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
+    /// <summary>
+    /// The random.
+    /// </summary>
+    private static readonly Random Random = new();
 
     /// <summary>
-    /// The main program.
+    /// The test list.
     /// </summary>
-    public static class Program
+    private static readonly List<object> TestList = new();
+
+    /// <summary>
+    /// The main method.
+    /// </summary>
+    public static void Main()
     {
-        /// <summary>
-        /// The random.
-        /// </summary>
-        private static readonly Random Random = new Random();
-
-        /// <summary>
-        /// The test list.
-        /// </summary>
-        // ReSharper disable once CollectionNeverQueried.Local
-        private static readonly List<object> TestList = new List<object>();
-
-        /// <summary>
-        /// The main method.
-        /// </summary>
-        public static void Main()
+        while (true)
         {
-            while (true)
+            switch (Random.Next(0, 2))
             {
-                switch (Random.Next(0, 2))
-                {
-                    case 0:
-                        TestList.Add(
-                            new List<string>
-                            {
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb",
-                                "a346thcg",
-                                "sdbvsbb",
-                                "scascvsdvsdv",
-                                "we7tbgwsb"
-                            });
-                        break;
-                    case 1:
-                        ReadSampleFile();
-                        break;
-                }
+                case 0:
+                    TestList.Add(
+                        new List<string>
+                        {
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb",
+                            "a346thcg",
+                            "sdbvsbb",
+                            "scascvsdvsdv",
+                            "we7tbgwsb"
+                        });
+                    break;
+                case 1:
+                    ReadSampleFile();
+                    break;
             }
-
-            // ReSharper disable once FunctionNeverReturns
         }
+    }
 
-        /// <summary>
-        /// Reads a sample file.
-        /// </summary>
-        private static void ReadSampleFile()
-        {
-            var text = File.ReadAllText(Directory.GetCurrentDirectory() + "\\Test.txt");
-            Console.WriteLine(text);
-        }
+    /// <summary>
+    /// Reads a sample file.
+    /// </summary>
+    private static void ReadSampleFile()
+    {
+        var text = File.ReadAllText(Directory.GetCurrentDirectory() + "\\Test.txt");
+        Console.WriteLine(text);
     }
 }
